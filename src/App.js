@@ -1,8 +1,9 @@
 import { ItemData } from "./components/Item/ItemData";
+import { ItemList } from "./components/Item/ItemList";
 
 function App() {
-  const data = "do exercise";
-  return <ItemData data={data} />;
+  const itemData = ["do do sth", "else", "ffv"];
+  return <ItemList itemData={itemData} />;
 }
 
 export default App;
