@@ -1,0 +1,30 @@
+.new-item {
+  width: 80%;
+  box-shadow: 0 0 30px gray;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+.new-item__title {
+  font-weight: bold;
+}
+.new-item__data {
+  border: 2px solid gray;
+  outline: 0;
+  padding: 0.5rem 1rem;
+}
+.new-item__data:hover {
+  border: 2px solid purple;
+  background-color: rgb(141, 105, 141);
+  transition: 0.5s;
+}
+
+.new-item__button {
+  background-color: purple;
+  padding: 1rem 2rem;
+  width: fit-content;
+  color: white;
+  border: 0;
+}
