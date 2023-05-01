@@ -15,7 +15,7 @@
   outline: 0;
   padding: 0.5rem 1rem;
 }
-.new-item__data:hover {
+.new-item__data:focus {
   border: 2px solid purple;
   background-color: rgb(141, 105, 141);
   transition: 0.5s;
