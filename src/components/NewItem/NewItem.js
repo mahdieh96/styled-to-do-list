@@ -3,24 +3,20 @@ import "./NewItem.css";
 import { Button } from "../UI/Button/Button";
 export const NewItem = (props) => {
   const [newItem, setNewItem] = useState("");
-  const addGoalHandler = () => {
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
     props.addNewItemHandler(newItem);
-    setNewItem("");
   };
   const addDataHandler = (e) => {
     setNewItem(e.target.value);
   };
   return (
-    <div className="new-item">
-      <h2 className="new-item__title">Course Goal</h2>
-      <input
-        className="new-item__data"
-        onChange={addDataHandler}
-        value={newItem}
-      />
-      <Button onClick={addGoalHandler} type="submit">
-        Add Goal
-      </Button>
-    </div>
+    <form onSubmit={formSubmitHandler}>
+      <div className="form-control">
+        <label>Course Goal</label>
+        <input onChange={addDataHandler} type="text" />
+      </div>
+      <Button type="submit">Add Goal</Button>
+    </form>
   );
 };
