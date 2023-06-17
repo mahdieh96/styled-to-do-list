@@ -12,10 +12,16 @@ function App() {
       return [...prev, newItem];
     });
   };
+
+  const deleteItemHandler = (deletedItemIndex) => {
+    setItemData((prev) => {
+      return prev.filter((item, index) => index != deletedItemIndex);
+    });
+  };
   return (
     <div className="container">
       <NewItem addNewItemHandler={addNewItemHandler} />
-      <ItemList itemData={itemData} />
+      <ItemList itemData={itemData} deleteItemHandler={deleteItemHandler} />
     </div>
   );
 }

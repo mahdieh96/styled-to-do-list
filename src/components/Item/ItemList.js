@@ -1,12 +1,18 @@
 import React from "react";
 import "./ItemList.css";
 import { ItemData } from "./ItemData";
-export const ItemList = ({ itemData }) => {
+export const ItemList = ({ itemData, deleteItemHandler }) => {
+  const itemClickedHandler = (e) => {
+    deleteItemHandler(e.currentTarget.id);
+  };
+  let i = 0;
   return (
-    <div className="item-list">
+    <ul className="item-list">
       {itemData.map((item) => (
-        <ItemData data={item} />
+        <li className="item-data" onClick={itemClickedHandler} key={i++} id={i}>
+          <ItemData data={item} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
