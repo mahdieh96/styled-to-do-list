@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NewItem.css";
+import { Button } from "../UI/Button/Button";
 export const NewItem = (props) => {
   const [newItem, setNewItem] = useState("");
   const addGoalHandler = () => {
@@ -17,9 +18,9 @@ export const NewItem = (props) => {
         onChange={addDataHandler}
         value={newItem}
       />
-      <button className="new-item__button" onClick={addGoalHandler}>
+      <Button onClick={addGoalHandler} type="submit">
         Add Goal
-      </button>
+      </Button>
     </div>
   );
 };

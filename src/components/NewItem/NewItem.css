@@ -20,11 +20,3 @@
   background-color: rgb(141, 105, 141);
   transition: 0.5s;
 }
-
-.new-item__button {
-  background-color: purple;
-  padding: 1rem 2rem;
-  width: fit-content;
-  color: white;
-  border: 0;
-}
