@@ -9,7 +9,7 @@ function App() {
     { text: "else", id: "2" },
   ];
   const [itemData, setItemData] = useState(data);
-
+  let classes = "";
   const addNewItemHandler = (newItem) => {
     setItemData((prev) => {
       return [...prev, { text: newItem, id: Math.random().toString() }];

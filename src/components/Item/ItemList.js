@@ -5,7 +5,7 @@ export const ItemList = ({ itemData, deleteItemHandler }) => {
   return (
     <ul className="item-list">
       {itemData.map((item) => (
-        <ItemData onDelete={deleteItemHandler} key={item.key} id={item.id}>
+        <ItemData onDelete={deleteItemHandler} key={item.id} id={item.id}>
           {item.text}
         </ItemData>
       ))}
